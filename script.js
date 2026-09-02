@@ -54,7 +54,7 @@ if (planForm) {
       `Special requests: ${f.get('notes') || 'None'}`,
       '',
       'I understand this is an enquiry and not a confirmed booking.'
-    ].join('\\n');
+    ].join('\n');
 
     window.open('https://wa.me/23059398142?text=' + encodeURIComponent(msg), '_blank', 'noopener');
   });
