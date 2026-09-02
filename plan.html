@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Plan Your Escape | Dream Escape Travel & Tours</title>
 <meta name="description" content="Dream Escape Travel & Tours — personalised travel planning, holidays, honeymoons and cruises.">
-<link rel="icon" href="assets/dream-escape-logo.jpeg">
+<link rel="icon" href="dream-escape-logo.jpeg">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
 <header class="site-header">
   <div class="container nav">
     <a class="brand" href="index.html">
-      <img src="assets/dream-escape-logo.jpeg" alt="Dream Escape Travel & Tours logo">
+      <img src="dream-escape-logo.jpeg" alt="Dream Escape Travel & Tours logo">
       <span class="brand-text">Dream Escape<br>Travel & Tours</span>
     </a>
     <nav class="nav-links">
@@ -35,16 +35,50 @@
 <section class="section"><div class="container form-wrap">
 <div><div class="eyebrow">No fixed package prices</div><h2>Every quote is prepared around current availability.</h2><p class="muted" style="margin-top:20px">Travel prices move frequently, so we don’t publish rates that may be outdated by the time you enquire.</p><div class="checks"><div class="check"><span>1</span><div><b>Share your idea</b><div class="small">Destination, dates and who’s travelling.</div></div></div><div class="check"><span>2</span><div><b>Tell us your style</b><div class="small">Romantic, tropical, city, cruise, family or something else.</div></div></div><div class="check"><span>3</span><div><b>Receive current options</b><div class="small">Based on the availability relevant to your request.</div></div></div></div></div>
 <form id="planForm">
-<div class="field-grid">
-<div class="field"><label>Your name</label><input name="name" required></div>
-<div class="field"><label>Destination or idea</label><input name="destination" placeholder="e.g. Maldives, Japan, Europe"></div>
-<div class="field"><label>Preferred travel dates</label><input name="dates" placeholder="e.g. 10–18 December"></div>
-<div class="field"><label>Number of travellers</label><input name="travellers" placeholder="e.g. 2 adults"></div>
-<div class="field"><label>Trip type</label><select name="triptype"><option>Holiday</option><option>Honeymoon</option><option>Cruise</option><option>Romantic escape</option><option>Family trip</option><option>City break</option><option>Tropical escape</option><option>Other</option></select></div>
-<div class="field"><label>Departure point</label><input name="departure" placeholder="City / airport"></div>
-<div class="field full"><label>Anything else?</label><textarea name="notes" placeholder="Hotel style, activities, special occasion, preferred airline, room type, visa help, etc."></textarea></div>
-<div class="full"><button class="btn btn-dark" type="submit">Send on WhatsApp</button> <a class="btn" href="mailto:dreamescape.mu@gmail.com">Email Instead</a></div>
-</div>
+  <div class="field-grid">
+    <div class="field"><label>Full name *</label><input name="name" autocomplete="name" required></div>
+    <div class="field"><label>WhatsApp / phone *</label><input name="phone" type="tel" autocomplete="tel" placeholder="+230..." required></div>
+    <div class="field full"><label>Email *</label><input name="email" type="email" autocomplete="email" required></div>
+
+    <div class="field"><label>Departure city / airport *</label><input name="departure" placeholder="e.g. Mauritius / MRU" required></div>
+    <div class="field"><label>Destination(s) *</label><input name="destination" placeholder="e.g. Maldives, Japan, Europe" required></div>
+
+    <div class="field"><label>Departure date</label><input name="departDate" type="date"></div>
+    <div class="field"><label>Return date</label><input name="returnDate" type="date"></div>
+
+    <div class="field"><label>Adults *</label><input name="adults" type="number" min="1" value="1" required></div>
+    <div class="field"><label>Children</label><input name="children" type="number" min="0" value="0"></div>
+    <div class="field full"><label>Children's ages (if applicable)</label><input name="childrenAges" placeholder="e.g. 4 and 9"></div>
+
+    <div class="field full">
+      <label>What do you need? *</label>
+      <div class="choice-grid">
+        <label class="choice"><input type="checkbox" name="services" value="Flights"> Flights</label>
+        <label class="choice"><input type="checkbox" name="services" value="Hotels"> Hotels</label>
+        <label class="choice"><input type="checkbox" name="services" value="Holiday package"> Holiday package</label>
+        <label class="choice"><input type="checkbox" name="services" value="Cruise"> Cruise</label>
+        <label class="choice"><input type="checkbox" name="services" value="Honeymoon"> Honeymoon</label>
+        <label class="choice"><input type="checkbox" name="services" value="Transfers"> Transfers</label>
+        <label class="choice"><input type="checkbox" name="services" value="Excursions"> Excursions</label>
+        <label class="choice"><input type="checkbox" name="services" value="Visa assistance"> Visa assistance</label>
+        <label class="choice"><input type="checkbox" name="services" value="Travel insurance"> Travel insurance</label>
+      </div>
+    </div>
+
+    <div class="field"><label>Hotel preference</label><select name="hotel"><option value="">No preference</option><option>3-star</option><option>4-star</option><option>5-star</option><option>Luxury / boutique</option></select></div>
+    <div class="field"><label>Approximate budget</label><input name="budget" placeholder="e.g. MUR 80,000 total"></div>
+
+    <div class="field full"><label>Special occasion</label><select name="occasion"><option value="">None / not specified</option><option>Honeymoon</option><option>Anniversary</option><option>Birthday</option><option>Proposal</option><option>Family celebration</option><option>Other</option></select></div>
+
+    <div class="field full"><label>Special requests / notes</label><textarea name="notes" placeholder="Preferred airline, room type, meal plan, excursions, accessibility needs, celebration details, or anything else we should know."></textarea></div>
+
+    <div class="full form-actions">
+      <button class="btn btn-dark" type="submit">Send My Travel Request</button>
+      <a class="btn" href="mailto:dreamescape.mu@gmail.com">Email Instead</a>
+    </div>
+
+    <div class="full notice">Submitting this form is a travel enquiry, not a confirmed booking. Prices and availability are confirmed after Dream Escape Travel & Tours reviews your request.</div>
+  </div>
 </form>
 </div></section>
 </main>
@@ -55,7 +89,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="assets/dream-escape-logo.jpeg" alt="">
+        <img src="dream-escape-logo.jpeg" alt="">
         <h3>Dream Escape Travel & Tours</h3>
         <p style="color:rgba(255,255,255,.66);max-width:360px">Online travel planning for beautiful, personalised journeys — from flights and stays to cruises, honeymoons and complete escapes.</p>
       </div>
