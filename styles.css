@@ -715,3 +715,53 @@ a.btn.btn-light:hover{
 .cruise-form-hero{padding:92px 0 56px;background:linear-gradient(120deg,#f6f0e6,#fffdf8)}.cruise-form-hero h1{font-size:clamp(3.2rem,7vw,6.5rem);max-width:900px;margin:12px 0 18px}.cruise-form-hero p{max-width:760px;color:#6e6a62;font-size:1.12rem;line-height:1.7}.cruise-form-section{padding-top:54px}.cruise-plan-form h2{margin:30px 0 6px;padding-top:10px;border-top:1px solid #e6ded1}.cruise-plan-form h2:first-child{border-top:0;margin-top:0}.cruise-plan-form .choice-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.cruise-plan-form .choice{min-height:54px;display:flex;align-items:center;padding:13px 15px;border:1px solid #ded9d0;border-radius:16px;background:#fff}.cruise-plan-form textarea{width:100%;resize:vertical}
 @media(max-width:900px){.cruise-plan-form .choice-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cruise-story-stage{min-height:570px;height:68vh}}
 @media(max-width:620px){.cruise-form-hero{padding:60px 0 36px}.cruise-form-hero h1{font-size:3.45rem}.cruise-plan-form .choice-grid{grid-template-columns:1fr}.cruise-story-slideshow{border-radius:28px}.cruise-story-stage{min-height:585px;height:70vh;max-height:700px}.cruise-story-caption{padding:28px 24px 26px;padding-right:64px}.cruise-story-caption h3{font-size:2.7rem}.cruise-story-arrow{width:46px;height:46px;font-size:1.9rem}.cruise-story-arrow.prev{left:12px}.cruise-story-arrow.next{right:12px}}
+
+
+/* ===== v5.9 Final customer-facing polish ===== */
+.wp-maldives{
+  background-image:linear-gradient(to top,rgba(7,10,10,.68),rgba(7,10,10,.04)),
+  url('https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=1500&q=90') !important;
+}
+.wp-japan{
+  background-image:linear-gradient(to top,rgba(7,10,10,.68),rgba(7,10,10,.04)),
+  url('https://images.unsplash.com/photo-1528164344705-47542687000d?auto=format&fit=crop&w=1500&q=90') !important;
+}
+.wp-paris{
+  background-image:linear-gradient(to top,rgba(7,10,10,.68),rgba(7,10,10,.04)),
+  url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1500&q=90') !important;
+}
+.wp-swiss{
+  background-image:linear-gradient(to top,rgba(7,10,10,.68),rgba(7,10,10,.04)),
+  url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1500&q=90') !important;
+}
+.seasonal-grid{align-items:stretch}
+.seasonal-card{
+  position:relative;min-height:440px;overflow:hidden;
+  border:1px solid rgba(255,255,255,.14) !important;
+  background-size:cover !important;background-position:center !important;
+  box-shadow:0 24px 60px rgba(0,0,0,.18);
+}
+.seasonal-card .card-body{
+  position:absolute;inset:auto 0 0 0;padding:34px 30px;color:#fff;
+  background:linear-gradient(to top,rgba(7,8,7,.92),rgba(7,8,7,.68) 60%,transparent);
+}
+.seasonal-card .eyebrow,.seasonal-card h3,.seasonal-card p{color:#fff !important}
+.seasonal-card p{color:rgba(255,255,255,.8) !important}
+.seasonal-summer{
+  background-image:url('https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1500&q=88') !important;
+}
+.seasonal-winter{
+  background-image:url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1500&q=88') !important;
+}
+.seasonal-tropical{
+  background-image:url('https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=1500&q=88') !important;
+}
+.destination-photo-card,.world-preview-card,.premium-tile{background-color:#d8d2c8}
+.footer-grid a{display:inline-block;margin-bottom:8px}
+@media(max-width:620px){
+  .seasonal-card{min-height:390px;border-radius:28px}
+  .seasonal-card .card-body{padding:28px 24px}
+  .world-preview-card{min-height:520px}
+  .destination-photo-card{min-height:520px}
+  .footer-grid a{margin-bottom:10px}
+}
