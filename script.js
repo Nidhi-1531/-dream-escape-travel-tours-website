@@ -282,3 +282,41 @@ if (mauritiusStory) {
 
   startStory();
 }
+
+
+// Cruise inspiration slideshow
+const cruiseStory = document.getElementById('cruiseStorySlideshow');
+if (cruiseStory) {
+  const slides = [...cruiseStory.querySelectorAll('[data-cruise-slide]')];
+  const dots = [...cruiseStory.querySelectorAll('[data-cruise-dot]')];
+  const prev = document.getElementById('cruiseStoryPrev');
+  const next = document.getElementById('cruiseStoryNext');
+  const counter = document.getElementById('cruiseStoryCounter');
+  let i = 0, timer = null, touchX = 0;
+  const show = n => { i=(n+slides.length)%slides.length; slides.forEach((s,x)=>s.classList.toggle('active',x===i)); dots.forEach((d,x)=>d.classList.toggle('active',x===i)); if(counter) counter.textContent=`${i+1} / ${slides.length}`; };
+  const start = () => { clearInterval(timer); timer=setInterval(()=>show(i+1),5600); };
+  prev?.addEventListener('click',()=>{show(i-1);start();}); next?.addEventListener('click',()=>{show(i+1);start();}); dots.forEach((d,x)=>d.addEventListener('click',()=>{show(x);start();}));
+  cruiseStory.addEventListener('touchstart',e=>{touchX=e.changedTouches[0].screenX;clearInterval(timer);},{passive:true});
+  cruiseStory.addEventListener('touchend',e=>{const dx=e.changedTouches[0].screenX-touchX;if(Math.abs(dx)>45)show(i+(dx<0?1:-1));start();},{passive:true}); start();
+}
+
+// Dedicated cruise enquiry -> WhatsApp
+const cruiseForm = document.getElementById('cruiseForm');
+if (cruiseForm) {
+  cruiseForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const f = new FormData(cruiseForm);
+    const all = name => f.getAll(name).filter(Boolean).join(', ') || 'Not specified';
+    const msg = [
+      'Hello Dream Escape Travel & Tours,','','I would like to request a cruise quotation.','',
+      `Full name: ${f.get('name')||''}`,`WhatsApp / phone: ${f.get('phone')||''}`,`Email: ${f.get('email')||''}`,'',
+      `Cruise region: ${f.get('region')||''}`,`Countries / ports wanted: ${f.get('places')||'Not specified'}`,`Embarkation port: ${f.get('embarkation')||''}`,`Travelling from: ${f.get('origin')||''}`,
+      `Preferred departure date: ${f.get('departDate')||'Flexible'}`,`Date flexibility: ${f.get('flexibility')||''}`,`Cruise length: ${f.get('duration')||'No preference'}`,`Journey type: ${f.get('journeyType')||'No preference'}`,'',
+      `Adults: ${f.get('adults')||''}`,`Children: ${f.get('children')||'0'}`,`Children ages: ${f.get('childrenAges')||'N/A'}`,`Cabins / staterooms: ${f.get('cabins')||'1'}`,`Stateroom preference: ${all('stateroom')}`,`Bedding: ${f.get('bedding')||'No preference'}`,`Approximate budget: ${f.get('budget')||'Not specified'}`,'',
+      `Preferred cruise line(s): ${all('cruiseLine')}`,`Onboard priorities: ${all('onboard')}`,`Special occasion: ${f.get('occasion')||'None'}`,`Accessibility needs: ${f.get('accessibility')||'None specified'}`,'',
+      `Travel extras: ${all('extras')}`,`Notes: ${f.get('notes')||'None'}`,'',
+      'I understand this is an enquiry and not a confirmed booking.'
+    ].join('\n');
+    window.open('https://wa.me/23059398142?text='+encodeURIComponent(msg),'_blank');
+  });
+}
