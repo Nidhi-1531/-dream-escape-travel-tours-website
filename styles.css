@@ -401,3 +401,138 @@ footer a:hover{color:white}
 .wp-swiss{background-image:url('https://loremflickr.com/900/1100/switzerland,alps/all?lock=804')}
 @media(max-width:1000px){.world-preview-row{grid-template-columns:1fr 1fr}}
 @media(max-width:620px){.world-preview-row{display:block}.world-preview-card{height:430px;margin-bottom:14px}}
+
+
+/* ===== Premium destination slideshow v5.1 ===== */
+.destination-slideshow{
+  background:#0c0f0d;
+  position:relative;
+}
+.destination-slide-stage{
+  height:min(68vh,760px);
+  min-height:560px;
+  position:relative;
+  overflow:hidden;
+  background:#101310;
+}
+.destination-slide-stage img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:opacity .32s ease, transform .55s ease;
+  opacity:1;
+  transform:scale(1.001);
+}
+.destination-slide-stage img.changing{
+  opacity:.2;
+  transform:scale(1.018);
+}
+.destination-slide-shade{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(to top,rgba(5,8,6,.48),transparent 34%),
+    linear-gradient(90deg,rgba(5,8,6,.12),transparent 30%,transparent 70%,rgba(5,8,6,.12));
+}
+.destination-slide-arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:3;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.5);
+  background:rgba(8,10,9,.42);
+  backdrop-filter:blur(10px);
+  color:white;
+  font-size:2.35rem;
+  line-height:1;
+  cursor:pointer;
+  transition:background .2s ease,transform .2s ease;
+}
+.destination-slide-arrow:hover{
+  background:rgba(8,10,9,.72);
+  transform:translateY(-50%) scale(1.05);
+}
+.destination-slide-arrow.prev{left:24px}
+.destination-slide-arrow.next{right:24px}
+.destination-slide-counter{
+  position:absolute;
+  right:26px;
+  bottom:22px;
+  z-index:3;
+  padding:8px 12px;
+  border-radius:999px;
+  background:rgba(7,9,8,.58);
+  border:1px solid rgba(255,255,255,.28);
+  color:white;
+  font-size:.74rem;
+  font-weight:800;
+  letter-spacing:.08em;
+}
+.destination-slide-dots{
+  min-height:50px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:9px;
+  background:#0c0f0d;
+  padding:14px 20px 8px;
+}
+.destination-slide-dot{
+  width:8px;
+  height:8px;
+  padding:0;
+  border:0;
+  border-radius:50%;
+  background:rgba(255,255,255,.34);
+  cursor:pointer;
+  transition:width .25s ease,background .25s ease,border-radius .25s ease;
+}
+.destination-slide-dot.active{
+  width:28px;
+  border-radius:999px;
+  background:#e9d0a2;
+}
+.destination-slide-caption{
+  background:#0c0f0d;
+  color:rgba(255,255,255,.58);
+  text-align:center;
+  font-size:.7rem;
+  padding:0 20px 16px;
+  letter-spacing:.04em;
+}
+
+/* Hide the old collage rules inside the modal if retained by cached CSS */
+.destination-modal .destination-modal-gallery{display:none}
+
+@media(max-width:1000px){
+  .destination-slide-stage{
+    height:62vh;
+    min-height:500px;
+  }
+}
+@media(max-width:620px){
+  .destination-slide-stage{
+    height:58vh;
+    min-height:430px;
+    max-height:610px;
+  }
+  .destination-slide-arrow{
+    width:48px;
+    height:48px;
+    font-size:1.95rem;
+  }
+  .destination-slide-arrow.prev{left:12px}
+  .destination-slide-arrow.next{right:12px}
+  .destination-slide-counter{
+    right:14px;
+    bottom:14px;
+  }
+  .destination-slide-caption{
+    padding-bottom:13px;
+  }
+}

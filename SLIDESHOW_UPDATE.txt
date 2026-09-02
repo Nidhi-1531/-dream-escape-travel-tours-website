@@ -1,0 +1,1 @@
+Premium v5.1 update: Destination previews now use a 7-photo slideshow with arrows, dots, automatic rotation, keyboard navigation and mobile swipe gestures.

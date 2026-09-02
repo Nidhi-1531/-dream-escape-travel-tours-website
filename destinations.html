@@ -642,12 +642,16 @@
 <div class="destination-modal" id="destinationModal" aria-hidden="true">
   <button class="destination-modal-close" id="destinationModalClose" aria-label="Close destination preview">×</button>
   <div class="destination-modal-shell">
-    <div class="destination-modal-gallery">
-      <div class="destination-modal-main"><img id="destinationMainPhoto" alt=""></div>
-      <div class="destination-modal-side">
-        <img id="destinationPhoto2" alt="">
-        <img id="destinationPhoto3" alt="">
+    <div class="destination-slideshow" id="destinationSlideshow">
+      <div class="destination-slide-stage">
+        <img id="destinationSlidePhoto" alt="">
+        <div class="destination-slide-shade"></div>
+        <button class="destination-slide-arrow prev" id="destinationSlidePrev" aria-label="Previous photo">‹</button>
+        <button class="destination-slide-arrow next" id="destinationSlideNext" aria-label="Next photo">›</button>
+        <div class="destination-slide-counter" id="destinationSlideCounter">1 / 7</div>
       </div>
+      <div class="destination-slide-dots" id="destinationSlideDots" aria-label="Photo navigation"></div>
+      <div class="destination-slide-caption">Swipe or use the arrows to explore this destination.</div>
     </div>
     <div class="destination-modal-info">
       <div>
