@@ -263,3 +263,141 @@ footer a:hover{color:white}
   .mauritius-final-cta{min-height:600px}
   .final-cta-copy h2{font-size:3.7rem}
 }
+
+
+/* ===== Premium Destination Explorer v5 ===== */
+.destination-premium-intro{
+  display:grid;
+  grid-template-columns:1.1fr .7fr;
+  align-items:end;
+  gap:70px;
+  margin:58px 0 42px;
+}
+.destination-premium-intro h2{font-size:clamp(3rem,5vw,5.4rem);max-width:780px;margin-top:8px}
+.destination-premium-intro p{font-size:1.02rem;color:var(--muted);max-width:520px}
+
+.destination-photo-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+.destination-photo-card{
+  min-height:480px;
+  border-radius:28px;
+  overflow:hidden;
+  position:relative;
+  color:white;
+  cursor:pointer;
+  background-image:var(--dest-image);
+  background-size:cover;
+  background-position:center;
+  box-shadow:0 24px 65px rgba(24,19,12,.10);
+  transform:translateY(0);
+  transition:transform .35s ease,box-shadow .35s ease;
+}
+.destination-photo-card:nth-child(7n+1){grid-column:span 2}
+.destination-photo-card:nth-child(7n+1),.destination-photo-card:nth-child(11n+3){min-height:570px}
+.destination-photo-card:hover{transform:translateY(-6px);box-shadow:0 32px 85px rgba(24,19,12,.18)}
+.destination-photo-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(5,8,6,.88) 0%,rgba(5,8,6,.22) 58%,rgba(5,8,6,.07) 100%)}
+.destination-photo-content{position:absolute;left:0;right:0;bottom:0;padding:30px;z-index:1}
+.destination-photo-content h3{font-size:clamp(2.4rem,3.4vw,4rem);margin:7px 0 12px}
+.destination-photo-content p{max-width:520px;color:rgba(255,255,255,.78);line-height:1.6}
+.destination-meta{text-transform:uppercase;letter-spacing:.17em;font-size:.66rem;color:#efd7a5;font-weight:800}
+.destination-preview-link{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-weight:800;font-size:.88rem}
+.destination-preview-link b{font-size:1.2rem;transition:transform .25s ease}
+.destination-photo-card:hover .destination-preview-link b{transform:translateX(4px)}
+
+.modal-open{overflow:hidden}
+.destination-modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  background:rgba(8,10,9,.76);
+  backdrop-filter:blur(12px);
+  padding:22px;
+  overflow:auto;
+}
+.destination-modal.open{display:block}
+.destination-modal-close{
+  position:fixed;
+  top:24px;
+  right:28px;
+  z-index:10002;
+  width:52px;height:52px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.25);
+  background:rgba(10,12,10,.72);color:white;
+  font-size:2rem;line-height:1;cursor:pointer;
+}
+.destination-modal-shell{
+  width:min(1320px,100%);
+  margin:58px auto 24px;
+  background:#fffdf8;
+  border-radius:34px;
+  overflow:hidden;
+  box-shadow:0 40px 120px rgba(0,0,0,.34);
+}
+.destination-modal-gallery{
+  display:grid;
+  grid-template-columns:1.55fr .65fr;
+  gap:8px;
+  height:620px;
+  background:#111;
+}
+.destination-modal-main,.destination-modal-side{min-width:0;min-height:0}
+.destination-modal-main img,.destination-modal-side img{width:100%;height:100%;object-fit:cover;display:block}
+.destination-modal-side{display:grid;grid-template-rows:1fr 1fr;gap:8px}
+.destination-modal-info{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:55px;
+  align-items:end;
+  padding:42px 46px 48px;
+}
+.destination-modal-info h2{font-size:clamp(3.5rem,6vw,6.8rem);margin:6px 0 16px}
+.destination-modal-info p{max-width:760px;color:var(--muted);font-size:1.05rem}
+.destination-highlights{display:flex;gap:9px;flex-wrap:wrap;margin-top:22px}
+.destination-highlights span{padding:9px 13px;border:1px solid var(--line);border-radius:999px;font-size:.78rem;background:#fff}
+.destination-modal-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.destination-photo-note{font-size:.68rem;color:#918a80;margin-top:20px}
+.mauritius-destination-banner{margin-bottom:42px}
+
+@media(max-width:1000px){
+  .destination-photo-grid{grid-template-columns:1fr 1fr}
+  .destination-photo-card:nth-child(7n+1){grid-column:span 2}
+  .destination-premium-intro{grid-template-columns:1fr;gap:20px}
+  .destination-modal-gallery{height:520px}
+  .destination-modal-info{grid-template-columns:1fr;gap:28px}
+  .destination-modal-actions{justify-content:flex-start}
+}
+@media(max-width:620px){
+  .destination-premium-intro{margin:42px 0 28px}
+  .destination-premium-intro h2{font-size:3rem}
+  .destination-photo-grid{display:block}
+  .destination-photo-card,.destination-photo-card:nth-child(7n+1),.destination-photo-card:nth-child(11n+3){
+    min-height:470px;margin-bottom:15px;
+  }
+  .destination-photo-content{padding:24px}
+  .destination-photo-content h3{font-size:2.8rem}
+  .destination-modal{padding:0;background:#fffdf8}
+  .destination-modal-close{top:14px;right:14px}
+  .destination-modal-shell{margin:0;border-radius:0;min-height:100vh}
+  .destination-modal-gallery{height:auto;display:block}
+  .destination-modal-main{height:430px}
+  .destination-modal-side{grid-template-columns:1fr 1fr;grid-template-rows:none;height:210px}
+  .destination-modal-info{padding:28px 22px 40px}
+  .destination-modal-info h2{font-size:3.7rem}
+  .destination-modal-actions .btn{width:100%}
+}
+
+.world-preview-section{background:#f8f3ea}
+.world-preview-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.world-preview-card{height:480px;border-radius:26px;overflow:hidden;position:relative;padding:26px;color:white;text-decoration:none;display:flex;flex-direction:column;justify-content:end;background-size:cover;background-position:center;box-shadow:0 22px 55px rgba(20,16,10,.10)}
+.world-preview-card::before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(5,8,6,.76),rgba(5,8,6,.06))}
+.world-preview-card span,.world-preview-card b{position:relative;z-index:1}.world-preview-card span{font-family:"Cormorant Garamond";font-size:2.8rem}.world-preview-card b{font-size:.82rem;margin-top:8px}
+.wp-maldives{background-image:url('https://loremflickr.com/900/1100/maldives,luxury/all?lock=801')}
+.wp-japan{background-image:url('https://loremflickr.com/900/1100/japan,travel/all?lock=802')}
+.wp-paris{background-image:url('https://loremflickr.com/900/1100/paris,france/all?lock=803')}
+.wp-swiss{background-image:url('https://loremflickr.com/900/1100/switzerland,alps/all?lock=804')}
+@media(max-width:1000px){.world-preview-row{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.world-preview-row{display:block}.world-preview-card{height:430px;margin-bottom:14px}}

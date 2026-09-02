@@ -1,0 +1,8 @@
+Destination Explorer photography
+
+"
+"The dedicated Mauritius page continues to use verified Mauritius Pexels photography.
+"
+"For the large catalogue of 60+ other destinations, preview imagery is requested dynamically from LoremFlickr using destination-specific search keywords and locked image IDs. LoremFlickr serves Creative Commons Flickr photography. This makes it possible to give every listed destination a multi-photo visual preview without storing hundreds of image files in the repository.
+"
+"Because these previews are dynamically matched, individual images can occasionally change or be less exact than hand-curated imagery. Key destinations can later be replaced with fully curated local photographs one by one.
