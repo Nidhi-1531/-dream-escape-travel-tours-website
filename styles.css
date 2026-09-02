@@ -536,3 +536,24 @@ footer a:hover{color:white}
     padding-bottom:13px;
   }
 }
+
+
+/* ===== v5.2 CTA contrast fix ===== */
+.btn.btn-light,
+a.btn.btn-light,
+.mauritius-home-feature .btn.btn-light,
+.mauritius-real-hero .btn.btn-light,
+.mauritius-final-cta .btn.btn-light,
+.mauritius-destination-banner .btn.btn-light{
+  color:#11110f !important;
+  background:#fffdf8 !important;
+  border-color:#fffdf8 !important;
+  text-shadow:none !important;
+  opacity:1 !important;
+}
+.btn.btn-light:hover,
+a.btn.btn-light:hover{
+  color:#11110f !important;
+  background:#f1e8d8 !important;
+  border-color:#f1e8d8 !important;
+}

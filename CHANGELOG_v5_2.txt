@@ -1,0 +1,3 @@
+v5.2 changes:
+1. Fixed white/light CTA buttons so their text is clearly visible, including Discover Mauritius and Plan My Mauritius Escape.
+2. Removed the three homepage bullet points under Explore Destinations.
