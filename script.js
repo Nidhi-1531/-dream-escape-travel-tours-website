@@ -240,3 +240,45 @@ if (planForm) {
     if (destinationInput) destinationInput.value = preselected;
   }
 }
+
+
+// Mauritius story slideshow — authentic island imagery
+const mauritiusStory = document.getElementById('mauritiusStorySlideshow');
+if (mauritiusStory) {
+  const storySlides = [...mauritiusStory.querySelectorAll('[data-mauritius-story-slide]')];
+  const storyDots = [...mauritiusStory.querySelectorAll('[data-mauritius-story-dot]')];
+  const storyPrev = document.getElementById('mauritiusStoryPrev');
+  const storyNext = document.getElementById('mauritiusStoryNext');
+  const storyCounter = document.getElementById('mauritiusStoryCounter');
+  let storyIndex = 0;
+  let storyTimer = null;
+  let storyTouchStart = 0;
+
+  const showStorySlide = (nextIndex) => {
+    storyIndex = (nextIndex + storySlides.length) % storySlides.length;
+    storySlides.forEach((slide, i) => slide.classList.toggle('active', i === storyIndex));
+    storyDots.forEach((dot, i) => dot.classList.toggle('active', i === storyIndex));
+    if (storyCounter) storyCounter.textContent = `${storyIndex + 1} / ${storySlides.length}`;
+  };
+
+  const startStory = () => {
+    clearInterval(storyTimer);
+    storyTimer = setInterval(() => showStorySlide(storyIndex + 1), 5600);
+  };
+
+  storyPrev?.addEventListener('click', () => { showStorySlide(storyIndex - 1); startStory(); });
+  storyNext?.addEventListener('click', () => { showStorySlide(storyIndex + 1); startStory(); });
+  storyDots.forEach((dot, i) => dot.addEventListener('click', () => { showStorySlide(i); startStory(); }));
+
+  mauritiusStory.addEventListener('touchstart', e => {
+    storyTouchStart = e.changedTouches[0].screenX;
+    clearInterval(storyTimer);
+  }, {passive:true});
+  mauritiusStory.addEventListener('touchend', e => {
+    const delta = e.changedTouches[0].screenX - storyTouchStart;
+    if (Math.abs(delta) > 45) showStorySlide(storyIndex + (delta < 0 ? 1 : -1));
+    startStory();
+  }, {passive:true});
+
+  startStory();
+}
