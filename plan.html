@@ -51,6 +51,33 @@
     <div class="field"><label>Children</label><input name="children" type="number" min="0" value="0"></div>
     <div class="field full"><label>Children's ages (if applicable)</label><input name="childrenAges" placeholder="e.g. 4 and 9"></div>
 
+    <div class="field">
+      <label>Travel party type</label>
+      <select name="partyType">
+        <option value="">Not specified</option>
+        <option>Solo traveller</option>
+        <option>Couple</option>
+        <option>Family</option>
+        <option>Friends / small group</option>
+        <option>Large group (10+ travellers)</option>
+        <option>Corporate / organisation group</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Would you like a guide?</label>
+      <select name="guideRequest">
+        <option value="">Not specified</option>
+        <option>Yes — private / local guide requested</option>
+        <option>Maybe — please advise options</option>
+        <option>No guide needed</option>
+      </select>
+    </div>
+
+    <div class="field full">
+      <label>Group name / purpose (optional)</label>
+      <input name="groupPurpose" placeholder="e.g. Family reunion, friends' trip, company incentive, club holiday">
+    </div>
+
     <div class="field full">
       <label>What do you need? *</label>
       <div class="choice-grid">
@@ -61,6 +88,8 @@
         <label class="choice"><input type="checkbox" name="services" value="Honeymoon"> Honeymoon</label>
         <label class="choice"><input type="checkbox" name="services" value="Transfers"> Transfers</label>
         <label class="choice"><input type="checkbox" name="services" value="Excursions"> Excursions</label>
+        <label class="choice"><input type="checkbox" name="services" value="Group travel coordination"> Group travel coordination</label>
+        <label class="choice"><input type="checkbox" name="services" value="Private / local guide"> Private / local guide</label>
         <label class="choice"><input type="checkbox" name="services" value="Visa assistance"> Visa assistance</label>
         <label class="choice"><input type="checkbox" name="services" value="Travel insurance"> Travel insurance</label>
       </div>
@@ -78,7 +107,7 @@
       <a class="btn" href="mailto:dreamescape.mu@gmail.com">Email Instead</a>
     </div>
 
-    <div class="full notice">Submitting this form is a travel enquiry, not a confirmed booking. Prices and availability are confirmed after Dream Escape Travel & Tours reviews your request.</div>
+    <div class="full notice">Submitting this form is a travel enquiry, not a confirmed booking. Prices and availability are confirmed after Dream Escape Travel & Tours reviews your request. Private/local guides are arranged where available and may depend on destination, language, dates and group size.</div>
   </div>
 </form>
 </div></section>
