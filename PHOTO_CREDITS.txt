@@ -1,0 +1,10 @@
+Dream Escape Travel & Tours — Mauritius photography sources
+
+The Mauritius imagery in this package uses free-to-use Pexels photographs identified as Mauritius:
+- Le Morne beach resort aerial — Michal Marek, Pexels photo 3703465
+- Resort pool, Flic-en-Flac, Mauritius — Holiday4free.com (Manuel), Pexels photo 15796414
+- Sailboat and sandbar, Mauritius — Dominik Ruhl, Pexels photo 7425280
+- Tropical waterfall, Mauritius — Pew Nguyen, Pexels photo 37084500
+- Le Morne mountain from Mauritian beach — Zak H, Pexels photo 36731902
+
+These image URLs are embedded directly in the site CSS/HTML and load from images.pexels.com.

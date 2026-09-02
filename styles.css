@@ -172,3 +172,94 @@ footer a:hover{color:white}
 .mauritius-mosaic{display:grid;grid-template-columns:1.3fr .7fr .7fr;grid-template-rows:300px 300px;gap:16px}.mosaic-card{border-radius:26px;background-size:cover;background-position:center;position:relative;overflow:hidden}.mosaic-card::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.6),transparent 58%)}.mosaic-card span{position:absolute;left:22px;bottom:18px;z-index:1;color:white;font-family:"Cormorant Garamond";font-size:2rem}.m1{grid-row:1/3;background-image:url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=88')}.m2{background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=88')}.m3{background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=88')}.m4{background-image:url('https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=900&q=88')}.m5{background-image:url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=88')}.mauritius-quote{display:flex;align-items:end;justify-content:space-between;gap:50px;padding:52px;border-radius:32px;background:white;border:1px solid var(--line)}.quote-actions{display:flex;gap:10px;flex-wrap:wrap}.mauritius-destination-banner{display:flex;align-items:end;justify-content:space-between;gap:30px;padding:38px;margin-bottom:34px;border-radius:28px;color:white;background:linear-gradient(100deg,rgba(7,15,12,.84),rgba(7,15,12,.26)),url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=88') center/cover}.mauritius-destination-banner p{max-width:650px;color:rgba(255,255,255,.8)}
 @media(max-width:1000px){.experience-grid{grid-template-columns:1fr 1fr}.travel-style-grid{grid-template-columns:1fr 1fr}.mauritius-mosaic{grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,300px)}.m1{grid-row:auto}.m5{grid-column:1/3}.mauritius-quote{display:block}.quote-actions{margin-top:24px}}
 @media(max-width:620px){.container{width:min(100% - 28px,620px)}.nav{height:82px}.brand img{width:48px;height:48px}.brand-text{font-size:1.05rem}.hero{min-height:76vh}.hero-content{padding:74px 0 54px}.section{padding:78px 0}.image-card{min-height:390px}.mauritius-feature-inner{min-height:500px}.mauritius-feature-copy h2{font-size:3.2rem}.mauritius-hero{min-height:78vh}.mauritius-hero-content{padding:82px 0 58px}.mauritius-hero h1{font-size:3.5rem}.mauritius-photo{min-height:430px}.lux-stats{grid-template-columns:1fr}.experience-grid{grid-template-columns:1fr}.experience-card{height:430px}.travel-style-grid{grid-template-columns:1fr}.mauritius-mosaic{grid-template-columns:1fr;grid-template-rows:repeat(5,260px)}.m5{grid-column:auto}.mauritius-quote{padding:30px 22px}.mauritius-destination-banner{display:block;padding:28px 22px}.hero-actions .btn{width:100%}}
+
+
+/* ===== Luxury v4 — real Mauritius photography ===== */
+.premium-showcase{background:#f7f3eb}
+.premium-head h2{max-width:760px}
+.premium-editorial-grid{display:grid;grid-template-columns:1.35fr .65fr;grid-template-rows:330px 330px;gap:18px}
+.premium-tile{position:relative;border-radius:30px;overflow:hidden;background-size:cover;background-position:center;color:#fff;min-height:330px;box-shadow:0 26px 70px rgba(20,17,12,.13)}
+.premium-tile-large{grid-row:1/3}
+.premium-tile-copy{position:absolute;left:0;right:0;bottom:0;padding:34px;max-width:650px}
+.premium-tile-copy h3{font-size:clamp(2.2rem,3vw,3.6rem);margin:8px 0 10px}
+.premium-tile-copy p{color:rgba(255,255,255,.82);max-width:540px}
+.eyebrow.light,.light{color:#f3deb4}
+.text-link-light{color:white;text-decoration:none;font-weight:800;border-bottom:1px solid rgba(255,255,255,.45);padding-bottom:3px}
+.premium-service-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:30px;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:var(--line)}
+.premium-service-strip>div{background:white;padding:26px}
+.premium-service-strip span{font-family:"Cormorant Garamond";font-size:2rem;color:var(--champagne);display:block}
+.premium-service-strip b{display:block;margin:8px 0}
+.premium-service-strip small{color:var(--muted);line-height:1.5}
+
+.mauritius-real-hero{min-height:88vh;display:flex;align-items:end;background-size:cover;background-position:center;color:white}
+.mauritius-real-hero h1{font-size:clamp(4.4rem,8vw,8rem);max-width:1040px;line-height:.88;margin:10px 0 26px}
+.mauritius-real-hero p{font-size:1.16rem;max-width:730px;color:rgba(255,255,255,.86);line-height:1.7}
+.mauritius-editorial-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:82px;align-items:center}
+.mauritius-editorial-photo{min-height:680px;border-radius:34px;background-size:cover;background-position:center;box-shadow:0 30px 90px rgba(25,20,12,.15)}
+.mauritius-editorial-copy .btn{margin-top:26px}
+.mauritius-real-grid{display:grid;grid-template-columns:repeat(2,1fr);grid-auto-rows:520px;gap:18px}
+.mauritius-real-card{position:relative;border-radius:30px;background-size:cover;background-position:center;overflow:hidden;color:white;box-shadow:0 22px 60px rgba(20,16,10,.12)}
+.mauritius-real-card.wide{grid-column:span 2}
+.mauritius-real-card>div{position:absolute;left:0;bottom:0;right:0;padding:34px;max-width:760px}
+.mauritius-real-card h3{font-size:clamp(2.4rem,4vw,4.2rem);margin:9px 0 10px}
+.mauritius-real-card p{color:rgba(255,255,255,.8);font-size:1.02rem}
+.mauritius-luxury-band{background:#101612;color:white}
+.luxury-band-head{display:flex;justify-content:space-between;align-items:end;gap:70px;margin-bottom:50px}
+.luxury-band-head>div{max-width:760px}
+.luxury-band-head p{max-width:420px;color:rgba(255,255,255,.65)}
+.luxury-band-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.luxury-band-card{padding:32px;border:1px solid rgba(255,255,255,.14);border-radius:24px;background:rgba(255,255,255,.04)}
+.luxury-band-card span{font-family:"Cormorant Garamond";font-size:2.4rem;color:#d0af77}
+.luxury-band-card h3{font-size:2rem;margin:16px 0 8px}
+.luxury-band-card p{color:rgba(255,255,255,.62)}
+.mauritius-service-split{align-items:center;gap:84px}
+.mauritius-service-image{min-height:700px;border-radius:34px;background-size:cover;background-position:center;box-shadow:0 30px 90px rgba(25,20,12,.14)}
+.mauritius-final-cta{min-height:650px;display:flex;align-items:center;background-size:cover;background-position:center;color:white}
+.final-cta-copy{max-width:800px}
+.final-cta-copy h2{font-size:clamp(4rem,7vw,7rem);margin:8px 0 18px}
+.final-cta-copy p{max-width:650px;font-size:1.12rem;color:rgba(255,255,255,.82)}
+
+/* More polished desktop spacing */
+@media(min-width:1200px){
+  .site-header .container{width:min(1320px,calc(100% - 64px))}
+  .nav-links a{font-size:.78rem}
+  .hero-content{max-width:1060px}
+  .section-head{align-items:end}
+  .form-wrap{grid-template-columns:.72fr 1.28fr}
+}
+
+/* Tablet */
+@media(max-width:1000px){
+  .premium-editorial-grid{grid-template-columns:1fr 1fr;grid-template-rows:460px 360px}
+  .premium-tile-large{grid-column:1/3;grid-row:auto}
+  .premium-service-strip{grid-template-columns:1fr 1fr}
+  .mauritius-editorial-grid{grid-template-columns:1fr;gap:38px}
+  .mauritius-editorial-photo{min-height:560px}
+  .luxury-band-grid{grid-template-columns:1fr 1fr}
+  .luxury-band-head{display:block}
+  .luxury-band-head p{margin-top:20px}
+  .mauritius-service-split{grid-template-columns:1fr;gap:42px}
+  .mauritius-service-image{min-height:520px}
+}
+
+/* Mobile */
+@media(max-width:620px){
+  .premium-editorial-grid{display:block}
+  .premium-tile{min-height:440px;margin-bottom:16px}
+  .premium-tile-large{min-height:520px}
+  .premium-tile-copy{padding:24px}
+  .premium-service-strip{grid-template-columns:1fr}
+  .premium-service-strip>div{padding:22px}
+  .mauritius-real-hero{min-height:82vh;background-position:58% center}
+  .mauritius-real-hero h1{font-size:3.75rem;line-height:.92}
+  .mauritius-real-hero p{font-size:1rem}
+  .mauritius-editorial-photo{min-height:440px}
+  .mauritius-real-grid{display:block}
+  .mauritius-real-card,.mauritius-real-card.wide{min-height:460px;margin-bottom:16px}
+  .mauritius-real-card>div{padding:24px}
+  .mauritius-real-card h3{font-size:2.65rem}
+  .luxury-band-grid{grid-template-columns:1fr}
+  .mauritius-service-image{min-height:440px}
+  .mauritius-final-cta{min-height:600px}
+  .final-cta-copy h2{font-size:3.7rem}
+}
