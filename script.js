@@ -36,6 +36,8 @@ if (planForm) {
       `Full name: ${f.get('name') || ''}`,
       `WhatsApp / phone: ${f.get('phone') || ''}`,
       `Email: ${f.get('email') || ''}`,
+      `Country of residence: ${f.get('country') || ''}`,
+      `Preferred language: ${f.get('language') || ''}`,
       '',
       `Departure: ${f.get('departure') || ''}`,
       `Destination(s): ${f.get('destination') || ''}`,
